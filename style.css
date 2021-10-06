@@ -372,6 +372,7 @@ footer h5{
     #hero{
         padding-left: 0 !important;
         padding-right: 0 !important;
+        clip-path: polygon(0 0, 100% 0%, 100% 94.5%, 0% 100%);
 
     }
 
