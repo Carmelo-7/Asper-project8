@@ -304,13 +304,18 @@ z-index: 2;
 #get-started-text h5{
     color: #6900c7;
 }
+
+.btn {
+    border: none !important;
+}
+
 /* <------------footer--------> */
 
 footer h5{
     font-family: Metropolis-bold;
     text-transform: uppercase;
-letter-spacing: .125em;
-font-size: 0.75rem;
+    letter-spacing: .125em;
+    font-size: 0.75rem;
 }
 
 #footer-brand{
@@ -351,9 +356,13 @@ font-size: 0.75rem;
         right:60vw;
     }
 
-    .sidebar-requested{
-         width: 60vw; 
+    aside{
+
+        right: -60vw;
+
+        width: 60vw;
     }
+
 
     nav{
         padding-left: 2rem !important;
