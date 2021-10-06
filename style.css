@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&display=swap');
+@font-face {
+    font-family: Metropolis;
+    src: url(Metropolis-Regular.otf);
+}
+@font-face {
+    font-family:Metropolis-bold ;
+    src: url(./metropolis.bold.otf);
+}
+
+@keyframes Rotate {
+
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+html{
+overflow-x: hidden;
+scrollbar-width: thin;
+scrollbar-color: #6900c7 #fff;
+
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: rgb(143, 143, 143);
+}
+
+html::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(88, 88, 88);
+}
+
+html::-webkit-scrollbar{
+    width: 1vw;
+}
+
+
+*{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family:Metropolis,'Roboto','Helvetica Neue', 'Lato','Nunito','Montserrat','Open sans',sans-serif;
+    
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+aside{
+    
+    position: fixed;
+    right: -40vw;
+    top: 0;
+    width: 40vw;
+    scrollbar-width: none;
+    z-index: 99;
+    height: 100vh;
+    overflow: auto;
+    overflow-x: hidden;
+    box-shadow: -.15rem 0 1.75rem 0 rgba(34,39,46,.15);
+    transition: all 500ms ease-in-out;
+}
+
+
+.sidebar-requested{
+    right: 0;
+}
+
+
+aside h6{
+    font-family: Metropolis-bold;
+    opacity: 0.7;
+    font-size: .85rem;
+    letter-spacing: 0.05em;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(33,40,50,.15) !important;
+    
+}
+
+.theme-changer{
+    position:fixed;
+    height: 48px;
+    width: 48px;
+    right: 0;
+    top: 24vh;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    z-index: 99;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 0 7px rgba(0,0,0,0.3);
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+}
+
+.theme-changer-fired{
+    right: 40vw;
+}
+
+
+.color{
+    cursor: pointer;
+}
+
+.color1{
+    background-color: #0061f2;
+background-image: linear-gradient(45deg,#0061f2,#6900c7);
+}
+
+.color2{
+    background-color: #1da1f5;
+background-image: linear-gradient(45deg,#1da1f5,#8039da);
+}
+
+.color3{
+    background-color: #f53b57;
+    background-image: linear-gradient(45deg,#f53b57,#ff793f);
+}
+
+.color4{
+    background-color: #6eabc2;
+background-image: linear-gradient(45deg,#6eabc2,#506c6a);
+}
+
+.color5{
+    background-color: #06794f;
+background-image: linear-gradient(45deg,#06794f,#0fa28b);
+}
+
+
+
+.bi-gear-fill{
+   font-size: 1rem;
+   animation: Rotate 3s linear normal infinite forwards;
+   
+}
+
+.container-fluid{position: relative; padding: 0 !important;}
+
+nav{
+    padding:2rem 6rem ;
+}
+
+.navbar-brand{
+    font-family: Metropolis-bold;
+}
+.nav-item{margin: 0 1rem;}
+
+
+/* <------------HERO--------> */
+
+#hero{
+    background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+    background-color: #6900c7;
+    min-width: 100%;
+    margin: 0 !important;
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);  
+    min-height: 100vh;  
+}
+
+#hero-title{
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+#hero-text{
+   margin-bottom: 2rem;
+}
+
+#hero .row div{
+    padding: 0 !important;
+}
+
+#hero #form-container{
+   margin: 6rem 0;
+   max-width: 45%;
+}
+
+#hero form{
+    padding: 0 4rem;
+    
+}
+
+#form-title{
+    letter-spacing: 1px;
+}
+
+form input{
+    max-height: 20px;
+    padding: 1.2rem 1rem !important;
+
+}
+
+/* <------------find us--------> */
+#find-us {
+    padding:3rem 6rem !important;
+}
+
+
+
+#find-us .img{
+    max-width: 150px;
+    opacity: 0.25;
+}
+
+#find-us svg{
+color: #a7aeb8 !important;
+
+}
+
+/* <------------Features--------> */
+
+#features{
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: #f2f6fc;
+ padding: 3rem 5.5rem 0 5.5rem;
+ position: relative;
+}
+
+#features-text{
+   max-width: 60%;
+padding-top: 10rem;
+padding-left: 0.9rem;
+}
+
+#features::after,#features::before{
+    content: '';
+    overflow: visible;
+    background: rgb(255, 255, 255);
+    transform: skewY(-3deg);
+    position: absolute;
+    bottom: -60px;
+    height: 100px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* <------------ Feature Cards --------> */
+#cards-container{
+position: relative;
+z-index: 2;
+}
+
+.Card{
+    min-width: 40%;
+    max-width: 45%;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(33,40,50,.15);
+    border: 1px solid rgba(33,40,50,.125);
+    background-color: #fff;
+    padding: 2.5rem;
+}
+
+.Card .feature-icon{
+    max-width: 80px;
+    min-height: 80px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+
+}
+
+.Card1 .feature-icon{
+    background-color: rgba(105, 0, 199,0.15);
+}
+
+.Card2 .feature-icon{
+    background-color: rgba(0, 172, 105,0.15);
+}
+
+.Card3 .feature-icon{
+    background-color: rgba(0, 97, 242,0.15);
+}
+.Card4 .feature-icon{
+    background-color: rgba(244, 161, 0,.15);
+}
+.Card img{
+   min-width: 2.5rem;
+}
+
+.Card i{
+    font-size: 2rem;
+}
+.Card1 i{
+    color: #6900c7;
+}
+.Card4 i{
+    color: #f4a100;
+}
+
+/* <------------GET STARTED--------> */
+#get-started{
+    padding:5rem 3.5rem ;
+}
+
+#get-started .btn{
+    font-size: 0.875rem;
+}
+
+#get-started-text h5{
+    color: #6900c7;
+}
+/* <------------footer--------> */
+
+footer h5{
+    font-family: Metropolis-bold;
+    text-transform: uppercase;
+letter-spacing: .125em;
+font-size: 0.75rem;
+}
+
+#footer-brand{
+    text-decoration: none;
+    font-family: Metropolis-bold;
+    font-size: 1.2rem;
+}
+
+
+/* ---------MEDIA QUERIES----------> */
+
+
+@media screen and (max-width:992px){
+
+    #features{
+        clip-path: polygon(0 5.5%, 100% 0%, 100% 100%, 0% 100%);
+
+    }
+
+    .Card{
+        min-width: 75%;
+    }
+   #hero #form-container{
+        max-width: 100%;
+    }
+
+    #hero #hero-text{
+        min-width: 100%;
+    }
+    #features-text{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:400px){
+
+    .theme-changer-fired{
+        right:60vw;
+    }
+
+    .sidebar-requested{
+         width: 60vw; 
+    }
+
+    nav{
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+
+    #hero{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+    }
+
+    #find-us{
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+
+    #cards-container{
+    padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .Card{
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    }
+
+    #get-started-text,#get-started-btns{
+    padding:0 !important;
+    }
+
+   
+}
